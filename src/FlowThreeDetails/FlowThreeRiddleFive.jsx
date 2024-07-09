@@ -117,7 +117,7 @@ const FlowThreeRiddleFive = () => {
           className="h-7"
           icon={faArrowLeft}
           onClick={() => {
-            navigate("/FlowTwoRiddles");
+            navigate("/FlowThreeRiddles");
           }}
         />
       </div>
@@ -138,7 +138,7 @@ const FlowThreeRiddleFive = () => {
             style={{ backgroundColor: "#ECA555" }}
             onClick={handleCapture}
           >
-            Submit
+            Upload
           </button>
         </div>
       </div>
@@ -178,8 +178,6 @@ const FlowThreeRiddleFive = () => {
           </div>
         </div>
       )}
-
-      {imgSrc && <img src={imgSrc} alt="Captured" className="mt-5" />}
     </div>
   );
 };
