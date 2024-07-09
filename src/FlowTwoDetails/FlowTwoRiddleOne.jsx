@@ -88,7 +88,7 @@ const FlowTwoRiddleOne = () => {
           navigate("/FlowTwoRiddles");
         });
       }
-      // else if (location === "Brit" && confidence >= 0.6 && confidence < 0.8) {
+      // else if (location === "Brit" && confidence >= 0.6 && confidence < 0.97) {
       //   Swal.fire({
       //     icon: "error",
       //     title: "Close!",

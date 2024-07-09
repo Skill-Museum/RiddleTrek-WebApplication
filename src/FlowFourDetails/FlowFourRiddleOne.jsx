@@ -89,7 +89,7 @@ const FlowFourRiddleOne = () => {
       // else if (
       //   location === "Scholarship_Wall" &&
       //   confidence >= 0.6 &&
-      //   confidence < 0.8
+      //   confidence < 0.97
       // ) {
       //   Swal.fire({
       //     icon: "error",

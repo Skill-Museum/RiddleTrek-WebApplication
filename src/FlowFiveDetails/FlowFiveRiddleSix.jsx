@@ -77,18 +77,18 @@ const FlowFiveRiddleSix = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Skill" && confidence >= "0.80") {
+      if (location === "Skill" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
-          title: "Your uploaded image is correct.",
-          text: "Move on to the next riddle!",
+          title: "You have completed all the Riddles!",
+          text: "Kindly head towards Tridev Gurung Room.",
         }).then(() => {
           navigate("/FlowFiveRiddles");
         });
       } else if (
         location === "Skill" &&
         confidence >= 0.6 &&
-        confidence < 0.8
+        confidence < 0.97
       ) {
         Swal.fire({
           icon: "error",

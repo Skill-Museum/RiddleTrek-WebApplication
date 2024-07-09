@@ -90,7 +90,7 @@ const FlowThreeRiddleOne = () => {
       //  else if (
       //   location === "Alumni" &&
       //   confidence >= 0.6 &&
-      //   confidence < 0.8
+      //   confidence < 0.97
       // ) {
       //   Swal.fire({
       //     icon: "error",
