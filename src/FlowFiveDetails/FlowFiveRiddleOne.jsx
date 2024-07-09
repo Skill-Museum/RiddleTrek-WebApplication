@@ -77,7 +77,7 @@ const FlowFiveRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Main Gate" && confidence >= "0.80") {
+      if (location === "Main Gate" && confidence >= "0.60") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -86,17 +86,19 @@ const FlowFiveRiddleOne = () => {
           localStorage.setItem("F5-R2", true);
           navigate("/FlowFiveRiddles");
         });
-      } else if (
-        location === "Main Gate" &&
-        confidence >= 0.6 &&
-        confidence < 0.8
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Close!",
-          text: "Click clearer and better image of the location.",
-        });
-      } else if (location != "Main Gate") {
+      }
+      // else if (
+      //   location === "Main Gate" &&
+      //   confidence >= 0.6 &&
+      //   confidence < 0.8
+      // ) {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Close!",
+      //     text: "Click clearer and better image of the location.",
+      //   });
+      // }
+      else if (location != "Main Gate") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",

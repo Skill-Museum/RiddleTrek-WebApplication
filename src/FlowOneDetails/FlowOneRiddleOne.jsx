@@ -54,7 +54,9 @@ const FlowOneRiddleOne = () => {
   };
 
   const toggleCameraFacingMode = () => {
-    setFacingMode((prevMode) => (prevMode === "user" ? "environment" : "user"));
+    setFacingMode((prevMode) =>
+      prevMode === "user" ? { exact: "environment" } : "user"
+    );
   };
 
   const uploadImage = async (imageSrc) => {
@@ -77,7 +79,7 @@ const FlowOneRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Coffee Station" && confidence >= "0.80") {
+      if (location === "Coffee Station" && confidence >= "0.60") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -86,17 +88,19 @@ const FlowOneRiddleOne = () => {
           localStorage.setItem("F1-R2", true);
           navigate("/FlowOneRiddles");
         });
-      } else if (
-        location === "Coffee Station" &&
-        confidence >= 0.6 &&
-        confidence < 0.8
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Close!",
-          text: "Click clearer and better image of the location.",
-        });
-      } else if (location != "Coffee Station") {
+      }
+      // else if (
+      //   location === "Coffee Station" &&
+      //   confidence >= 0.6 &&
+      //   confidence < 0.8
+      // ) {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Close!",
+      //     text: "Click clearer and better image of the location.",
+      //   });
+      // }
+      else if (location != "Coffee Station") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",

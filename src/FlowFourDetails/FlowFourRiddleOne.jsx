@@ -76,7 +76,7 @@ const FlowFourRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Scholarship_Wall" && confidence >= "0.80") {
+      if (location === "Scholarship_Wall" && confidence >= "0.60") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -85,17 +85,19 @@ const FlowFourRiddleOne = () => {
           localStorage.setItem("F4-R2", true);
           navigate("/FlowFourRiddles");
         });
-      } else if (
-        location === "Scholarship_Wall" &&
-        confidence >= 0.6 &&
-        confidence < 0.8
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Close!",
-          text: "Click clearer and better image of the location.",
-        });
-      } else if (location != "Scholarship_Wall") {
+      }
+      // else if (
+      //   location === "Scholarship_Wall" &&
+      //   confidence >= 0.6 &&
+      //   confidence < 0.8
+      // ) {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Close!",
+      //     text: "Click clearer and better image of the location.",
+      //   });
+      // }
+      else if (location != "Scholarship_Wall") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",
