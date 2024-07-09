@@ -14,7 +14,7 @@ const FlowFiveRiddleOne = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const webcamRef = useRef(null);
   const navigate = useNavigate();
-  const [facingMode, setFacingMode] = useState("user");
+  const [facingMode, setFacingMode] = useState("environment");
 
   const handleCapture = async () => {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
