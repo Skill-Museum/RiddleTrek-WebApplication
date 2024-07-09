@@ -145,7 +145,7 @@ const FlowFiveRiddleFour = () => {
             style={{ backgroundColor: "#ECA555" }}
             onClick={handleCapture}
           >
-            Submit
+            Upload
           </button>
         </div>
       </div>
@@ -185,8 +185,6 @@ const FlowFiveRiddleFour = () => {
           </div>
         </div>
       )}
-
-      {imgSrc && <img src={imgSrc} alt="Captured" className="mt-5" />}
     </div>
   );
 };

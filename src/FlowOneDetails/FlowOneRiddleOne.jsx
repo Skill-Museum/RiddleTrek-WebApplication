@@ -12,7 +12,7 @@ const FlowOneRiddleOne = () => {
   const [answer, setAnswer] = useState("");
   const [showVideo, setShowVideo] = useState(false);
   const [imgSrc, setImgSrc] = useState(null);
-  const [facingMode, setFacingMode] = useState("user");
+  const [facingMode, setFacingMode] = useState("environment");
   const webcamRef = useRef(null);
   const navigate = useNavigate();
 
@@ -185,8 +185,6 @@ const FlowOneRiddleOne = () => {
           </div>
         </div>
       )}
-
-      {imgSrc && <img src={imgSrc} alt="Captured" className="mt-5" />}
     </div>
   );
 };
