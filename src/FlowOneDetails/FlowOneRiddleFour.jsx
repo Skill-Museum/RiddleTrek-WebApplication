@@ -78,7 +78,7 @@ const FlowOneRiddleFour = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Scholarship_Wall" && confidence >= "0.97") {
+      if (location === "scholarship_wall" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -88,7 +88,7 @@ const FlowOneRiddleFour = () => {
           navigate("/FlowOneRiddles");
         });
       } else if (
-        location === "Scholarship_Wall" &&
+        location === "scholarship_wall" &&
         confidence >= 0.6 &&
         confidence < 0.97
       ) {
@@ -97,7 +97,7 @@ const FlowOneRiddleFour = () => {
           title: "Close!",
           text: "Click clearer and better image of the location.",
         });
-      } else if (location != "Scholarship_Wall") {
+      } else if (location != "scholarship_wall") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",
@@ -145,6 +145,13 @@ const FlowOneRiddleFour = () => {
             Upload
           </button>
         </div>
+      </div>
+
+      <div className="flex items-center justify-center w-4/5">
+        <h1 className="ml-4 text-red-500">
+          NOTE: You might need to wait 30-40 seconds for your uploaded image
+          response.
+        </h1>
       </div>
 
       {showVideo && (

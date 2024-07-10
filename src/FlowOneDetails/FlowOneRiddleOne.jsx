@@ -77,7 +77,7 @@ const FlowOneRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Coffee_Station" && confidence >= "0.97") {
+      if (location === "coffee_station" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -87,7 +87,7 @@ const FlowOneRiddleOne = () => {
           navigate("/FlowOneRiddles");
         });
       } else if (
-        location === "Coffee_Station" &&
+        location === "coffee_station" &&
         confidence >= 0.6 &&
         confidence < 0.97
       ) {
@@ -96,7 +96,7 @@ const FlowOneRiddleOne = () => {
           title: "Close!",
           text: "Click clearer and better image of the location.",
         });
-      } else if (location != "Coffee_Station") {
+      } else if (location != "coffee_station") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",
@@ -145,7 +145,12 @@ const FlowOneRiddleOne = () => {
           </button>
         </div>
       </div>
-
+      <div className="flex items-center justify-center w-4/5">
+        <h1 className="ml-4 text-red-500">
+          NOTE: You might need to wait 30-40 seconds for your uploaded image
+          response.
+        </h1>
+      </div>
       {showVideo && (
         <div className="fixed top-0 left-0 w-full h-4/5 bg-black z-50 flex flex-col justify-between">
           <Webcam
@@ -268,7 +273,7 @@ export default FlowOneRiddleOne;
 //       const location = responseData.predicted_class;
 //       const confidence = responseData.confidence;
 
-//       if (location === "Coffee_Station" && confidence >= "0.60") {
+//       if (location === "coffee_station" && confidence >= "0.97") {
 //         Swal.fire({
 //           icon: "success",
 //           title: "Your uploaded image is correct.",
@@ -277,7 +282,7 @@ export default FlowOneRiddleOne;
 //           localStorage.setItem("F1-R2", true);
 //           navigate("/FlowOneRiddles");
 //         });
-//       } else if (location !== "Coffee_Station") {
+//       } else if (location !== "coffee_station") {
 //         Swal.fire({
 //           icon: "error",
 //           title: "Not correct location.",

@@ -77,7 +77,7 @@ const FlowTwoRiddleFour = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Main Gate" && confidence >= "0.97") {
+      if (location === "main_gate" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -87,7 +87,7 @@ const FlowTwoRiddleFour = () => {
           navigate("/FlowTwoRiddles");
         });
       } else if (
-        location === "Main Gate" &&
+        location === "main_gate" &&
         confidence >= 0.6 &&
         confidence < 0.97
       ) {
@@ -96,7 +96,7 @@ const FlowTwoRiddleFour = () => {
           title: "Close!",
           text: "Click clearer and better image of the location.",
         });
-      } else if (location != "Main Gate") {
+      } else if (location != "main_gate") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",
@@ -143,6 +143,13 @@ const FlowTwoRiddleFour = () => {
             Upload
           </button>
         </div>
+      </div>
+
+      <div className="flex items-center justify-center w-4/5">
+        <h1 className="ml-4 text-red-500">
+          NOTE: You might need to wait 30-40 seconds for your uploaded image
+          response.
+        </h1>
       </div>
 
       {showVideo && (
