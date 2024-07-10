@@ -77,7 +77,7 @@ const FlowFiveRiddleThree = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "brit" && confidence >= "0.97") {
+      if (location === "brit" && confidence >= "0.90") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -86,11 +86,7 @@ const FlowFiveRiddleThree = () => {
           localStorage.setItem("F5-R4", true);
           navigate("/FlowFiveRiddles");
         });
-      } else if (
-        location === "brit" &&
-        confidence >= 0.6 &&
-        confidence < 0.97
-      ) {
+      } else if (location === "brit" && confidence >= 0.6 && confidence < 0.9) {
         Swal.fire({
           icon: "error",
           title: "Close!",

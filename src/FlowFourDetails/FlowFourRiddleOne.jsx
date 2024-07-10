@@ -76,7 +76,7 @@ const FlowFourRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "scholarship_wall" && confidence >= "0.97") {
+      if (location === "scholarship_wall" && confidence >= "0.90") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -88,7 +88,7 @@ const FlowFourRiddleOne = () => {
       } else if (
         location === "scholarship_wall" &&
         confidence >= 0.6 &&
-        confidence < 0.97
+        confidence < 0.9
       ) {
         Swal.fire({
           icon: "error",

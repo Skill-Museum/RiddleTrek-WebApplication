@@ -78,7 +78,7 @@ const FlowOneRiddleSix = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "skill" && confidence >= "0.97") {
+      if (location === "skill" && confidence >= "0.90") {
         Swal.fire({
           icon: "success",
           title: "You have completed all the Riddles!",
@@ -89,7 +89,7 @@ const FlowOneRiddleSix = () => {
       } else if (
         location === "skill" &&
         confidence >= 0.6 &&
-        confidence < 0.97
+        confidence < 0.9
       ) {
         Swal.fire({
           icon: "error",
