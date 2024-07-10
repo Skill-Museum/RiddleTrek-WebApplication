@@ -77,7 +77,7 @@ const FlowThreeRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Alumni" && confidence >= "0.60") {
+      if (location === "alumni" && confidence >= "0.60") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -88,7 +88,7 @@ const FlowThreeRiddleOne = () => {
         });
       }
       //  else if (
-      //   location === "Alumni" &&
+      //   location === "alumni" &&
       //   confidence >= 0.6 &&
       //   confidence < 0.97
       // ) {
@@ -98,7 +98,7 @@ const FlowThreeRiddleOne = () => {
       //     text: "Click clearer and better image of the location.",
       //   });
       // }
-      else if (location != "Alumni") {
+      else if (location != "alumni") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",

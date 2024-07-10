@@ -77,7 +77,7 @@ const FlowThreeRiddleTwo = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Scholarship_Wall" && confidence >= "0.97") {
+      if (location === "scholarship_wall" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -87,7 +87,7 @@ const FlowThreeRiddleTwo = () => {
           navigate("/FlowThreeRiddles");
         });
       } else if (
-        location === "Scholarship_Wall" &&
+        location === "scholarship_wall" &&
         confidence >= 0.6 &&
         confidence < 0.97
       ) {
@@ -96,7 +96,7 @@ const FlowThreeRiddleTwo = () => {
           title: "Close!",
           text: "Click clearer and better image of the location.",
         });
-      } else if (location != "Scholarship_Wall") {
+      } else if (location != "scholarship_wall") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",

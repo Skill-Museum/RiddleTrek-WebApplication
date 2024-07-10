@@ -77,7 +77,7 @@ const FlowTwoRiddleSix = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "Skill" && confidence >= "0.97") {
+      if (location === "skill" && confidence >= "0.97") {
         Swal.fire({
           icon: "success",
           title: "You have completed all the Riddles!",
@@ -86,7 +86,7 @@ const FlowTwoRiddleSix = () => {
           navigate("/FlowTwoRiddles");
         });
       } else if (
-        location === "Skill" &&
+        location === "skill" &&
         confidence >= 0.6 &&
         confidence < 0.97
       ) {
@@ -95,7 +95,7 @@ const FlowTwoRiddleSix = () => {
           title: "Close!",
           text: "Click clearer and better image of the location.",
         });
-      } else if (location != "Skill") {
+      } else if (location != "skill") {
         Swal.fire({
           icon: "error",
           title: "Not correct location.",
