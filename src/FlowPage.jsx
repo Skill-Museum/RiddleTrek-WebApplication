@@ -13,7 +13,7 @@ const FlowPage = () => {
             navigate("/FlowOneRiddles");
           }}
         >
-          FLOW 1
+          TEAM 1
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -22,7 +22,7 @@ const FlowPage = () => {
             navigate("/FlowTwoRiddles");
           }}
         >
-          FLOW 2
+          TEAM 2
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -31,7 +31,7 @@ const FlowPage = () => {
             navigate("/FlowThreeRiddles");
           }}
         >
-          FLOW 3
+          TEAM 3
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -40,7 +40,7 @@ const FlowPage = () => {
             navigate("/FlowFourRiddles");
           }}
         >
-          FLOW 4
+          TEAM 4
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -49,7 +49,7 @@ const FlowPage = () => {
             navigate("/FlowFiveRiddles");
           }}
         >
-          FLOW 5
+          TEAM 5
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -58,7 +58,7 @@ const FlowPage = () => {
             navigate("/FlowOneRiddles");
           }}
         >
-          FLOW 6
+          TEAM 6
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -67,7 +67,7 @@ const FlowPage = () => {
             navigate("/FlowTwoRiddles");
           }}
         >
-          FLOW 7
+          TEAM 7
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl cursor-pointer"
@@ -76,7 +76,7 @@ const FlowPage = () => {
             navigate("/FlowThreeRiddles");
           }}
         >
-          FLOW 8
+          TEAM 8
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl"
@@ -85,7 +85,7 @@ const FlowPage = () => {
             navigate("/FlowFourRiddles");
           }}
         >
-          FLOW 9
+          TEAM 9
         </div>
         <div
           className="w-3/5 p-14 bg-slate-400 flex items-center justify-center text-white font-semibold text-2xl border rounded-xl"
@@ -94,7 +94,7 @@ const FlowPage = () => {
             navigate("/FlowFiveRiddles");
           }}
         >
-          FLOW 10
+          TEAM 10
         </div>
       </div>
     </div>
