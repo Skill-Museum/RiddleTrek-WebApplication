@@ -78,7 +78,7 @@ const FlowTwoRiddleOne = () => {
       const location = responseData.predicted_class;
       const confidence = responseData.confidence;
 
-      if (location === "brit" && confidence >= "0.90") {
+      if (location === "brit" && confidence >= "0.80") {
         Swal.fire({
           icon: "success",
           title: "Your uploaded image is correct.",
@@ -87,7 +87,7 @@ const FlowTwoRiddleOne = () => {
           localStorage.setItem("F2-R2", true);
           navigate("/FlowTwoRiddles");
         });
-      } else if (location === "brit" && confidence >= 0.6 && confidence < 0.9) {
+      } else if (location === "brit" && confidence >= 0.6 && confidence < 0.8) {
         Swal.fire({
           icon: "error",
           title: "Close!",
