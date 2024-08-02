@@ -81,7 +81,7 @@ const FlowTwoRiddleSix = () => {
         Swal.fire({
           icon: "success",
           title: "You have completed all the Riddles!",
-          text: "Kindly head towards Tridev Gurung Room.",
+          text: "Kindly head towards your respective lab rooms.",
         }).then(() => {
           navigate("/FlowTwoRiddles");
         });
